@@ -28,7 +28,7 @@ final class Version20230726094358 extends AbstractMigration
                 sess_time INTEGER NOT NULL
             )
         ');
-        +$this->addSql('CREATE INDEX expiry ON sessions (sess_lifetime)');
+        $this->addSql('CREATE INDEX expiry ON sessions (sess_lifetime)');
     }
 
     public function down(Schema $schema): void
